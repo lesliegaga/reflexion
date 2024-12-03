@@ -34,4 +34,4 @@ async def generate(request: Request):
 
 if __name__ == "__main__":
     # 启动 Uvicorn 服务器
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8101)
