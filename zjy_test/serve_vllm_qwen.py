@@ -22,7 +22,7 @@ app = FastAPI(title="Qwen2 vLLM Service")
 # 替换 'path/to/qwen2/model' 为实际模型路径或 Hugging Face 模型 ID
 
 model = LLM(model="/mnt/tongyan.zjy/openlm/model/Qwen2.5-72B-Instruct-GPTQ-Int4",
-            tensor_parallel_size = 1, dtype = 'bfloat16', disable_log_stats = False, max_model_len = 512 * 50,
+            tensor_parallel_size = 1, dtype = 'bfloat16', disable_log_stats = False,enforce_eager=True, max_model_len = 512 * 50,
             gpu_memory_utilization = 0.9
             )
 
