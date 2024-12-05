@@ -40,7 +40,7 @@ async def generate_text(request: GenerateRequest):
         # 使用 vLLM 生成文本
         outputs = await model.generate(request.prompt, sampling_params)
         print("outputs", outputs)
-        generated_text = outputs.generations[0].text  # 获取第一个生成结果
+        generated_text = outputs.outputs[0].text  # 获取第一个生成结果
 
         return {"generated_text": generated_text}
 
