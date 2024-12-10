@@ -37,8 +37,14 @@ async def generate_text(request: GenerateRequest):
             # 其他参数可根据需求调整
         )
 
-        # 使用 vLLM 生成文本
-        outputs = await model.generate(request.prompt, sampling_params)
+        # Run the synchronous model.generate in a thread pool
+        loop = asyncio.get_running_loop()
+        outputs = await loop.run_in_executor(
+            None,
+            model.generate,
+            request.prompt,
+            sampling_params
+        )
         print("outputs", outputs)
         generated_text = outputs.outputs[0].text  # 获取第一个生成结果
 
