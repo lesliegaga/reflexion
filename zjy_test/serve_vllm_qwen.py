@@ -46,7 +46,7 @@ async def generate_text(request: GenerateRequest):
             sampling_params
         )
         print("outputs", outputs)
-        generated_text = outputs.outputs[0].text  # 获取第一个生成结果
+        generated_text = outputs[0].text  # 获取第一个生成结果
 
         return {"generated_text": generated_text}
 
