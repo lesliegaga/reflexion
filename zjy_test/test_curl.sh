@@ -9,7 +9,7 @@
 #<|im_start|>assistant", "max_tokens": 1000, "temperature": 0.1, "top_p": 0.8}'
 
 
-curl -X POST "http://localhost:8000/v1/chat/completions" \
+curl -X POST "http://localhost:8101/v1/chat/completions" \
 -H "Content-Type: application/json" \
 -d '{"model": "qwen_72b_instruct", "messages": [{"role": "user", "content": "<|im_start|>system \
 You are a helpful assistant. \
