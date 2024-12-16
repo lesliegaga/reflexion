@@ -8,7 +8,8 @@ from langchain.schema import (
 class AnyOpenAILLM:
     def __init__(self, *args, **kwargs):
         # Determine model type from the kwargs
-        model_name = kwargs.get('model_name', 'gpt-3.5-turbo') 
+        model_name = kwargs.get('model_name', 'gpt-3.5-turbo')
+        kwargs['openai_api_base'] = 'http://localhost:8101/v1/chat/completions'
         if model_name.split('-')[0] == 'text':
             self.model = OpenAI(*args, **kwargs)
             self.model_type = 'completion'
