@@ -154,7 +154,7 @@ class ReactAgent:
                  react_llm: AnyOpenAILLM = AnyOpenAILLM(
                                             temperature=0,
                                             max_tokens=100,
-                                            model_name="gpt-3.5-turbo",
+                                            model_name="qwen_72b_instruct",
                                             model_kwargs={"stop": "\n"},
                                             openai_api_key=os.environ['OPENAI_API_KEY']),
                  ) -> None:
@@ -264,13 +264,13 @@ class ReactReflectAgent(ReactAgent):
                  react_llm: AnyOpenAILLM = AnyOpenAILLM(
                                              temperature=0,
                                              max_tokens=100,
-                                             model_name="gpt-3.5-turbo",
+                                             model_name="qwen_72b_instruct",
                                              model_kwargs={"stop": "\n"},
                                              openai_api_key=os.environ['OPENAI_API_KEY']),
                  reflect_llm: AnyOpenAILLM = AnyOpenAILLM(
                                                temperature=0,
                                                max_tokens=250,
-                                               model_name="gpt-3.5-turbo",
+                                               model_name="qwen_72b_instruct",
                                                openai_api_key=os.environ['OPENAI_API_KEY']),
                  ) -> None:
         
