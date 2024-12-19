@@ -37,13 +37,13 @@ class CoTAgent:
                     self_reflect_llm: AnyOpenAILLM = AnyOpenAILLM(
                                             temperature=0,
                                             max_tokens=250,
-                                            model_name="gpt-3.5-turbo",
+                                            model_name="qwen_72b_instruct",
                                             model_kwargs={"stop": "\n"},
                                             openai_api_key=os.environ['OPENAI_API_KEY']),
                     action_llm: AnyOpenAILLM = AnyOpenAILLM(
                                             temperature=0,
                                             max_tokens=250,
-                                            model_name="gpt-3.5-turbo",
+                                            model_name="qwen_72b_instruct",
                                             model_kwargs={"stop": "\n"},
                                             openai_api_key=os.environ['OPENAI_API_KEY']),
                     ) -> None:
