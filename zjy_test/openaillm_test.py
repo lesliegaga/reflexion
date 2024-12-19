@@ -35,7 +35,7 @@ if __name__ == '__main__':
     llm = AnyOpenAILLM(
     temperature=0,
     max_tokens=100,
-    model_name="gpt-3.5-turbo",
+    model_name="qwen_72b_instruct",
     model_kwargs={"stop": "\n"},
     openai_api_key=os.environ['OPENAI_API_KEY'])
     response= llm("你好，Qwen2！请问今天的天气如何")
