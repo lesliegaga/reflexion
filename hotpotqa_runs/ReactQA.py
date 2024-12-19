@@ -7,14 +7,10 @@
 
 
 import sys, os
-sys.path.append('..')
-root  = '../root/'
-
-
+sys.path.append('.')
+root  = './root/'
 # In[4]:
 
-
-import os
 os.environ['OPENAI_API_KEY']='sk'
 
 
