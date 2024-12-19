@@ -27,7 +27,7 @@ from agents import ReactReflectAgent, ReactAgent, ReflexionStrategy
 # In[6]:
 
 
-hotpot = joblib.load('../data/hotpot-qa-distractor-sample.joblib').reset_index(drop = True)
+hotpot = joblib.load('data/hotpot-qa-distractor-sample.joblib').reset_index(drop = True)
 
 
 # #### Define the Reflexion Strategy
