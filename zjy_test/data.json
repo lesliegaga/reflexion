@@ -2,6 +2,6 @@
   "messages": [
     {
       "role": "user",
-      "content": "<|im_start|>system\nYou are a helpful assistant.\n<|im_end|>\n<|im_start|>user\n你好，Qwen2！请问今天的天气如何\n<|im_end|>\n<|im_start|>assistant"}],
+      "content": "你好，Qwen2！请问今天的天气如何"}],
     "temperature": 0.1,"top_p": 0.8, "top_k": 1
   }
