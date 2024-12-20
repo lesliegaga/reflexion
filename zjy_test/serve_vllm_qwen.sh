@@ -6,6 +6,6 @@ python -m vllm.entrypoints.openai.api_server --tensor-parallel-size 2 \
 --served-model-name "qwen_72b_instruct"  \
 --max-model-len 8000 \
 --gpu-memory-utilization 0.7  \
---dtype=float16  \
+--dtype=bfloat16  \
  --enable-prefix-caching \
  --port 8101
